@@ -143,7 +143,7 @@ class PortfolioHandler(BaseHTTPRequestHandler):
 
 if __name__ == "__main__":
     initialize_database()
-    host = os.environ.get("HOST", "127.0.0.1")
+    host = os.environ.get("HOST", "0.0.0.0")
     port = int(os.environ.get("PORT", "8000"))
     server = ThreadingHTTPServer((host, port), PortfolioHandler)
     print(f"Portfolio server running at http://{host}:{port}")
